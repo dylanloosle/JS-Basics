@@ -113,8 +113,11 @@ alert(newMyName);
 
   //Code Here
 var outerFn = function(){
-    return 'Dylan'
+    return function(name) {
+        return name;
+    };
 };
+
 
 
 //Now save the result of invoking outerFn into a variable called innerFn.
@@ -122,4 +125,4 @@ var outerFn = function(){
   //Code Here
 var innerFn = outerFn();
 //Now invoke innerFn.
-console.log(innerFn);
+innerFn('Dylan');

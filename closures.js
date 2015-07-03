@@ -10,30 +10,33 @@ var outer = function(){
 //Invoke outer saving the return value into another variable called 'inner'.
 
   //Code Here
+var inner = outer();
+
 
 //Once you do that, invoke inner.
 
   //Code Here
-
+inner():
 
 
 //Next problem
 
 
 
-var callFriend = function(){
-  var friend = 'Jake';
-  function callF(number){
-    return 'Calling ' + friend + ' at ' + number;
-  }
-  return callF;
-};
+
 
 //Above you're given a callFriend function that returns another function.
 //Do what you need to do in order to call your function and get 'Calling Jake at 435-215-9248' in your console.
 
   //Code Here
-
+var callFriend = function(){
+  var friend = 'Jake';
+  function callF(number){
+    return 'Calling ' + friend + ' at ' + number;
+  }
+  return callF('435-215-9248');
+};
+callFriend();
 
 
 //Next Problem
@@ -50,6 +53,13 @@ var callFriend = function(){
   count() // 2
   count() // 3
   count() // 4
+var makeCounter = function(num){
+    return function(num){
+
+
+  }
+};
+
 
 
 
@@ -58,12 +68,16 @@ var callFriend = function(){
 
 
 /*
-  Write a function that accepts another function as it's first argument and returns a new function
+  Write a function that accepts another function as its first argument and returns a new function
   (which invokes the original function that was passed in) that can only ever be executed once.
 */
 
   //Code Here
+var myFunct = function(otherFunct){
+  return function(myFunct) {
 
+  }
+};
 
 
 //Next Problem
@@ -92,7 +106,7 @@ var callFriend = function(){
   Above you have a function named counter. Examine the function (without running the code) then below write what you expect to happen when the funciton is invoked. *Hint: setTimeout calls a function or evaluates an expression after a specified number of milliseconds.
 
     //Answer Here
-
+The loop will run and log 1 - 5 to the console.
 
   Now, run the function in your console and note what happpens.
 
@@ -124,5 +138,7 @@ var callFriend = function(){
 
   *Hint: Don't let this fool you. Break down what's really happening here.
 */
+
+
 
 

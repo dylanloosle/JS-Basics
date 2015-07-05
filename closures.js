@@ -53,10 +53,10 @@ callFriend();
   count() // 2
   count() // 3
   count() // 4
-var makeCounter = function(num){
-    return function(num){
-
-
+var makeCounter = function() {
+  var count = 0;
+  return function(){
+    return ++count;
   }
 };
 
@@ -74,7 +74,8 @@ var makeCounter = function(num){
 
   //Code Here
 var myFunct = function(otherFunct){
-  return function(myFunct) {
+  return function() {
+    myFunct();
 
   }
 };
@@ -87,7 +88,10 @@ var myFunct = function(otherFunct){
 /*
   Now, similar to the last problem, write a function called 'fnCounter' that accepts two parameters. The first parameter will be an anonymous function and the second parameter, 'N', will be a number. Now, in 'fnCounter', allow the anonymous funciton to be invoked 'N' number of times. After it's been invoked 'N' number of times, return 'STOP'.
 */
+var fnCounter = function(a, N){
 
+
+}
 
 
 //Next Problem
@@ -139,6 +143,12 @@ The loop will run and log 1 - 5 to the console.
   *Hint: Don't let this fool you. Break down what's really happening here.
 */
 
+var funcArray = function(){
+  var myArray=[];
+  return function(){
+    return myArray++;
+  }
+};
 
 
 

@@ -73,13 +73,13 @@ var makeCounter = function() {
 */
 
   //Code Here
-var myFunct = function(otherFunct){
-  return function() {
-    myFunct();
-
+var func = function(paramFunc) {
+  return function newFunc() {
+    return paramFunc();
   }
 };
 
+console.log(func(function(){return 'Only executed once'})());
 
 //Next Problem
 
